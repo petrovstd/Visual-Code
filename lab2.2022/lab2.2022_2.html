@@ -1,0 +1,16 @@
+<script>
+  "use strict"
+          let age = +(prompt("Введите свой возраст", 20));
+          let b = age % 10;
+    let s;
+          switch (b) {
+              case 1: s =" год"; break;
+              case 2:
+              case 3:
+              case 4: s = " года"; break;
+              default: s = " лет";
+          }
+          if (age > 10 && age < 20) s = "лет";
+          document.write("Вам - ", age, s);
+    </script>
+  

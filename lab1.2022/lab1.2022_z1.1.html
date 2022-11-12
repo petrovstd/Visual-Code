@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="lab1.2022_z1.1.css" rel="stylesheet" type="text/css" />
+<title>Петров Егор</title>
+</head>
+<body>
+<div>
+<script>
+"use strict"
+let Data = new Date();
+let Year = Data.getFullYear();
+let Month = Data.getMonth();
+let Day = Data.getDate();
+let Hours = Data.getHours();
+let Minutes = Data.getMinutes();
+
+let name1 = prompt("Введите название товара", "");
+let count1 = prompt("Введите цену товара", "");
+let amount1 = prompt("Введите количество товара", "");
+let name2 = prompt("Введите название товара", "");
+let count2 = prompt("Введите цену товара", "");
+let amount2 = prompt("Введите количество товара", "");
+alert("Покупки окончены!");
+
+let itog = amount1 * count1 + amount2 * count2;
+
+let skidka;
+if (itog >= 2000) {
+skidka = 5;
+}
+else if (itog >= 1500) {
+skidka = 4;
+}
+else if (itog >= 1000) {
+skidka = 3;
+}
+else if (itog >= 500) {
+skidka = 2;
+}
+else if (itog >= 300) {
+skidka = 1;
+}
+else {
+skidka = 0;
+}
+
+let itog2 = itog - itog * skidka / 100;
+
+document.write('000 "Евроторг<br />"');
+document.write('Спасибо за покупку!<br /><br />');
+document.write('Дата покупки: ' + Day + "." + Month + "." + Year + "" + '<br/>');
+document.write(Hours + ":" + Minutes + "" + '<br/><br/>');
+document.write(name1 + "" + amount1 + " = " + amount1 * count1 + "" + '<br/><br/>');
+document.write(name2 + "" + amount2 + " = " + amount2 * count2 + "" + '<br/><br/>');
+document.write('<b>ИТОГО</b><br/>' + itog + ' РУБ' + "" + '<br/><br/>');
+document.write('Ваша скидака: ' + skidka + '%<br/>');
+document.write(itog * skidka / 100 + ' РУБ<br/><br/>');
+document.write('<b>СУММА СО СКИДКОЙ</b><br/>' + itog2 + ' РУБ');
+
+
+</script>
+</div>
+</body>
+</html>

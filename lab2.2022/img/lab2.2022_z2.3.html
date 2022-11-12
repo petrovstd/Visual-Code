@@ -1,0 +1,24 @@
+<html>
+  
+<head>
+  <title>Петров Егор</title>
+</head>
+    
+<body>
+  <script>
+  window.onload = function() {
+    var fotos = new Array(3);
+    fotos[0]="pictures/pic1.jpg"
+    fotos[1]="pictures/pic2.jpg"
+    fotos[2]="pictures/pic3.jpg"
+
+    for (i = 0; i < 3; i++) 
+    {
+        var img = document.createElement('IMG');
+        img.src = fotos[i];
+        document.body.appendChild(img);
+  }
+  }
+  </script>
+</body>
+  </html>

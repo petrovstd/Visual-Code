@@ -1,0 +1,23 @@
+<script>
+  "use strict"
+let guessedNum = Number(alert("Загадайте число от 1 до 100"));
+let lowerLimit = 0;
+let upperLimit = 100;
+let N = 50;
+
+while (guessedNum !== N ) {
+  let answer = prompt(`Ваше число >, <, или равно ${N}`, '>, <, =');
+  if (answer == '>') {
+      lowerLimit = N;
+      N = Math.ceil((upperLimit - lowerLimit) / 2 + lowerLimit);
+  } else if (answer == '<') {
+      upperLimit = N;
+      N = Math.ceil((upperLimit - lowerLimit) / 2 + lowerLimit);
+  } else {
+      N = answer;
+      break;
+  };
+};
+alert(`Задуманное число ${N}`);
+
+</script>
